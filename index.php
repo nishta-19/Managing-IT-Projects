@@ -15,9 +15,9 @@
 		<nav>
 			<h2>Navigation</h2>
 			<ul>
-				<li><a href="index.php">Add sales records</a></li>
-				<li><a href="index.php">Edit sales records</a></li>
-				<li><a href="index.php">Reports</a></li>
+				<li><a href="add_sales_records.php">Add sales records</a></li>
+				<li><a href="edit_sales_records.php">Edit sales records</a></li>
+				<li><a href="reports.php">Reports</a></li>
 			</ul>
 		</nav>
 		<?php include("footer.inc"); ?>
