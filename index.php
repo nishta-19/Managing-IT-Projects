@@ -7,7 +7,7 @@
 	<meta name="description" content="Peoples Health Pharmarcy Website" />
 	<meta name="keywords"    content="Peoples Health Pharmarcy" />
 	<meta name="author"      content="Glory to the BlueBeard" />
-	<link href="styles/assignment2.css" rel="stylesheet" />
+	<link href="styles/page_style.css" rel="stylesheet" />
 </head>
 <body>
 	<?php include("header.inc"); ?>

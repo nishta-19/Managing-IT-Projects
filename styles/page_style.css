@@ -1,0 +1,211 @@
+/*
+filename: assignment.css
+author: Herbert Henkel
+created: 21/03/2019
+last modified: 03/04/2019
+description: this css file styles all the html files for my web assignment part 1
+*/
+body {
+	font-family: arial, verdana;
+	background-color: #bdbdbd;
+	font-size: 16px;
+}
+
+header {
+	background-image: url(images/logo.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	height: 160px;
+	width: 100%;
+	left: 0;
+    top: 0;
+	position: fixed;
+}
+
+header h1 {
+	letter-spacing: 4px;
+	text-align: center;
+	padding: 15px;
+	color: #121269;
+	font: bold 40px bahnschrift;
+}
+
+.log {
+	font-weight: bold;
+  	padding: 4px 8px;
+  	background: #444;
+  	color:#ddd;
+  	border:2px solid #444;
+	border-radius:18px;
+	text-decoration: none;
+}
+.log:hover {
+	background: #aaa;
+	color:#444;
+	border-color:#aaa;
+}
+
+#loginbutton {
+	font-weight: bold;
+	text-align: right;
+	padding-right: 3em;
+}
+
+#main {
+	top: 140px;
+	left: 8%;
+	right: 8%;
+	position: absolute;
+	background-color: #ddd;
+}
+
+nav {
+	overflow: hidden;
+	background-color: #444;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	list-style: none;
+	float: left;
+	font-size: 93%;
+}
+
+nav ul li a {
+	display:block;
+	font-weight: bold;
+	padding: 0.625em 2.5em;
+	text-decoration: none;
+	color: #ddd;
+	border-right: 1px solid #ddd;
+}
+
+nav ul li a:hover {
+	background-color: #ddd;
+	color: #444;
+}
+
+article {
+	padding: 1em;
+	clear: left;
+}
+
+fieldset {
+	border:2px solid #333;	
+    border-radius:6px;
+	margin-bottom:1em;
+}
+
+#genderbox, #skillsbox {
+	border:1px solid #333;	
+    border-radius:10px;
+	margin:0;
+}
+
+dl dt {
+	font-weight: bold;
+	display: inline-block;
+}
+
+dl dd {
+	display: inline;
+	margin: 0;
+    padding: 0 2em 0.5em 0;
+}
+
+figure {
+	float: right;
+	margin: 1em;
+	padding: 1em;
+	border: 3px solid black;
+}
+
+.timetable {
+	margin: auto;
+	text-align: center;
+}
+
+table, td, th {
+	border: 1px solid black;
+	border-collapse: collapse;
+	background-color: white;
+	height:1em;
+}
+
+th {
+	background-color: 	#ADD8E6;
+	border-width:2px;
+}
+
+.tne10006 {
+	background-color: #4682B4;
+	border-radius: 10px;
+}
+
+.cos10011 {
+	background-color: #B22222;
+	border-radius: 10px;
+}
+
+.cos10009 {
+	background-color: #228B22;
+	border-radius: 10px;
+}
+
+.cos10003 {
+	background-color: #9400D3;
+	border-radius: 10px;
+}
+
+input[type="submit"], input[type="reset"] {
+  font-weight: bold;
+  padding: 4px 8px;
+  background: #444;
+  color:#ddd;
+  border:2px solid #444;
+  border-radius:19px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+  background: #aaa;
+  color:#444;
+  border-color:#aaa;
+}
+
+span {
+	color: #bc0f0f;
+	font-size: 12px;
+}
+
+aside {
+	float: right;
+	border: 2px double red;
+	border-radius: 6px;
+	padding: 1em;
+	width: 25%;
+}
+
+#position1, #position2 {
+	border:2px solid #333;	
+    border-radius:6px;
+	margin-bottom:1em;
+	padding: 1em;
+	float: left;
+	width: 62%;
+}
+
+footer {
+	border-top: 1px solid #999;
+	clear: both;
+}
+
+footer p {
+	padding: 0 1em;
+	font-size: 12px;
+	text-align: center;
+}
+
