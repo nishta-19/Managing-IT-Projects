@@ -14,10 +14,10 @@
 	<div id="main">
 		<article>
 			<h2>Login</h2>
-			<form action="welcome_get.php" method="get">
+			<form action="authentucate.php" method="post" id="login">
 				Username: <input type="text" name="username"><br>
-				Passerword: <input type="text" name="password"><br>
-				<input type="submit">
+				Passerword: <input type="password" name="password"><br>
+				<input type="submit" form="login" value="login">
 			</form>
 		</article>
 		<?php include("footer.inc"); ?>
