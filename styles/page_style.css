@@ -12,9 +12,9 @@ body {
 }
 
 header {
-	background-image: url(images/logo.png);
+	background-image: url(images/logo.jpg);
 	background-repeat: repeat-x;
-	background-position: bottom;
+	background-position: center;
 	height: 160px;
 	width: 100%;
 	left: 0;
