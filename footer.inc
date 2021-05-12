@@ -1,3 +1,3 @@
 <footer>
-    <p>Website by GTBB</a></p>
+    <p>Website by GttB</a></p>
 </footer>
