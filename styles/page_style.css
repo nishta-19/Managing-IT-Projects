@@ -12,9 +12,9 @@ body {
 }
 
 header {
-	background-image: url(images/logo.jpg);
+	background-image: url(images/logo.png);
 	background-repeat: repeat-x;
-	background-position: center;
+	background-position: bottom;
 	height: 160px;
 	width: 100%;
 	left: 0;
@@ -100,33 +100,8 @@ fieldset {
 	margin-bottom:1em;
 }
 
-#genderbox, #skillsbox {
-	border:1px solid #333;	
-    border-radius:10px;
-	margin:0;
-}
-
-dl dt {
-	font-weight: bold;
-	display: inline-block;
-}
-
-dl dd {
-	display: inline;
-	margin: 0;
-    padding: 0 2em 0.5em 0;
-}
-
-figure {
-	float: right;
-	margin: 1em;
-	padding: 1em;
-	border: 3px solid black;
-}
-
-.timetable {
-	margin: auto;
-	text-align: center;
+.displaytable {
+	width: 100%;
 }
 
 table, td, th {
@@ -137,28 +112,8 @@ table, td, th {
 }
 
 th {
-	background-color: 	#ADD8E6;
+	background-color: 	#a5d0d3;
 	border-width:2px;
-}
-
-.tne10006 {
-	background-color: #4682B4;
-	border-radius: 10px;
-}
-
-.cos10011 {
-	background-color: #B22222;
-	border-radius: 10px;
-}
-
-.cos10009 {
-	background-color: #228B22;
-	border-radius: 10px;
-}
-
-.cos10003 {
-	background-color: #9400D3;
-	border-radius: 10px;
 }
 
 input[type="submit"], input[type="reset"] {
