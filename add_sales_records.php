@@ -14,10 +14,10 @@
 	<div id="main">
 		<article>
 			<h2>Add sales records</h2>
-			<form action="welcome_get.php" method="get">
+			<form action="welcome_get.php" method="post" id="add record">
 				Item: <input type="text" name="item"><br>
 				Quantity: <input type="text" name="quantity"><br>
-				<input type="submit">
+				<input type="submit" form="add record" value="Add Record">
 			</form>
 		</article>
 		<?php include("footer.inc"); ?>

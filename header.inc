@@ -1,4 +1,11 @@
 <header>
     <h1>Peoples Health Pharmacy</h1>
-    <a href="index.php">Home</a>
+
+    <?php
+        if (isset($_SESSION["loggedin"]))
+        {
+            echo '<a href="index.php">Home </a>';
+            echo '<a href="logout.php">Logout</a>';
+        }
+    ?>
 </header>
