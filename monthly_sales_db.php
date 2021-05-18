@@ -2,7 +2,7 @@
 include 'config.php';
 session_start();
 
-$filename = "Sales_" . date('Y-m-d') . ".csv"; 
+$filename = "Sales_" . $_SESSION['StartDate'] ."_". $_SESSION['EndDate'] . ".csv"; 
 $delimiter = ","; 
  
 // Create a file pointer 
@@ -13,10 +13,10 @@ $fields = array('SalesID', 'Date', 'ProductID', 'Ammount', 'UserID', 'Customer')
 fputcsv($f, $fields, $delimiter); 
  
 // Get records from the database 
-
-$start = $_SESSION['post-data']['StartDate'];
-$end = $_SESSION['post-data']['EndDate'];
-$result = $con->query("SELECT * FROM Sales WHERE Date Between  ORDER BY SalesID DESC"); 
+$stmt = $con->prepare("SELECT * FROM Sales WHERE Date Between ? AND ? ORDER BY SalesID DESC");
+$stmt->bind_param('ss', $_SESSION['StartDate'], $_SESSION['EndDate']);
+$stmt->execute();
+$result = $stmt->get_result(); 
 if($result->num_rows > 0){ 
     // Output each row of the data, format line as csv and write to file pointer 
     while($row = $result->fetch_assoc()){ 
