@@ -21,6 +21,24 @@ SET time_zone = "+00:00";
 -- Database: `phpsprint1`
 --
 
+DELIMITER $$
+--
+-- Procedures
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `Sales` (IN `pDate` VARCHAR(255), IN `pProdID` INT(10), IN `pAm` INT(255), IN `pUserID` INT(10), IN `pCust` VARCHAR(255))  BEGIN
+
+DECLARE vProdID INT(10);
+DECLARE vUserID INT(10);
+
+SELECT ProductID INTO vProdID FROM product WHERE Prodname=pProdID;
+SELECT UserID INTO vUserID FROM user WHERE Username=pUserID;
+
+INSERT INTO sales(Date,ProductID,Ammount,UserID,Customer) VALUES (pDate,vProdID,pAm,vUserID,pCust);
+
+END$$
+
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
