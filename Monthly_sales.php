@@ -1,18 +1,11 @@
 <?php
 include 'config.php';
+Include 'head.php';
 session_start();
 ?>
 
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-    <title>Peoples Health Pharmarcy</title>
-	<meta name="description" content="Peoples Health Pharmarcy Website" />
-	<meta name="keywords"    content="Peoples Health Pharmarcy" />
-	<meta name="author"      content="Glory to the BlueBeard" />
-	<link href="styles/page_style.css" rel="stylesheet" />
-</head>
 <body>
 <h2>Monthly sales Report</h2>
 			<h3>Dates</h3>
@@ -64,5 +57,6 @@ while($data = $result->fetch_assoc())
 ?>
 </table><br>
 <a href="monthly_sales_db.php"><button>Export As CSV</button></a>
+<?php include("footer.inc"); ?>
 </body>
 </html>

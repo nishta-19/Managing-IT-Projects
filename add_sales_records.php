@@ -1,25 +1,18 @@
 <?php
 Include 'config.php';
+Include 'head.php';
 $ResultSet = $con->query("SELECT Username FROM user");
 $ResultSet1 = $con->query("SELECT Prodname FROM product");
 ?>
 
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title>Peoples Health Pharmarcy</title>
-	<meta name="description" content="Peoples Health Pharmarcy Website" />
-	<meta name="keywords"    content="Peoples Health Pharmarcy" />
-	<meta name="author"      content="Glory to the BlueBeard" />
-	<link href="styles/page_style.css" rel="stylesheet" />
-</head>
 <body>
 	<?php include("header.inc"); ?>
 	<div id="main">
 		<article>
-			<h2>Add sales records</h2>
+			<h2>Add Sales Records</h2>
+			<p>Add a sale by filling out the form.</p>
 			<form action="add_sales_db.php" method="post" autocomplete="off">
 				Date: <input type="date" name="Date" id="Date"><br>
 				ProductID: <select name="ProdID" id="ProdID" required>
