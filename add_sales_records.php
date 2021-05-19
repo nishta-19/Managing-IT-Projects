@@ -21,7 +21,7 @@ $ResultSet1 = $con->query("SELECT Prodname FROM product");
 				}
 				?>
 				</select><br>
-			Ammount: <input type="number" name="item" id="item"><br>
+			Amount: <input type="number" name="item" id="item"><br>
 			User: 				<select name="UserID" id="UserID" required>
 				<?php
 				while ($row = mysqli_fetch_array($ResultSet)){

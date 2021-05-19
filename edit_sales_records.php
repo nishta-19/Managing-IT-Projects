@@ -3,7 +3,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "phpsprint1";
-include "display_sales_records.php";
+//include "display_sales_records.php";
 
 
 $connect = new mysqli($servername, $username, $password, $dbname);
@@ -37,11 +37,21 @@ if(isset($_POST['update']))
 <h3>Update Data</h3>
 SalesID: <?php echo $SalesID?>
 <form method="POST">
-  <label for="ProductID">ProductID </label>
-  <input type="text" name="ProductID" value="<?php echo $row['ProductID'] ?>" placeholder="Enter ProductID" Required>
-  <label for="Amount">Amount </label>
+  <label for="ProductID">ProductID: </label>
+  
+  <select name="ProductID" id="ProductID"  required>
+				<?php
+                $ResultSet1 = $connect->query("SELECT * FROM product");
+                while ($prow = mysqli_fetch_array($ResultSet1)){
+					
+                    echo "<option value='" . $prow['ProductID'] . "'>" . $prow['Prodname'] . "</option>";
+				}
+				?>
+				</select>
+  
+  <label for="Amount">Amount: </label>
   <input type="text" name="Amount" value="<?php echo $row['Ammount'] ?>" placeholder="Enter Amount" Required>
-  <label for="Date">Sale Date </label>
-  <input type="text" name="Date" value="<?php echo $row['Date'] ?>" placeholder="Enter Date" Required>
+  <label for="Date">Sale Date: </label>
+  <input type="date" name="Date" value="<?php echo $row['Date'] ?>" placeholder="Enter Date" Required>
   <input type="submit" name="update" value="Update">
 </form>

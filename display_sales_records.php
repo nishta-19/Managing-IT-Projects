@@ -28,8 +28,8 @@
 		echo "<table class='displaytable'>
 		<tr>
 		<tr>
-		<th>ProductID</th>
 		<th>SalesID</th>
+		<th>ProductID</th>
 		<th>Prodname</th>
 		<th>Prodtype</th>
 		<th>Amount</th>
@@ -39,17 +39,22 @@
 		while($row = mysqli_fetch_array($resultSales))
 		{
 			echo "<tr>";
-			echo "<td>" . $row['ProductID'] . "</td>";
 			echo "<td>" . $row['SalesID'] . "</td>";
+			echo "<td>" . $row['ProductID'] . "</td>";
 			echo "<td>" . $resultP[intval($row['ProductID'] - 1 )]['Prodname'] . "</td>";
 			echo "<td>" . $resultP[intval($row['ProductID'] - 1 )]['Prodtype'] . "</td>";
 			echo "<td>" . $row['Ammount'] . "</td>";
 			echo "<td>" . $row['Date'] . "</td>";
-			?><td> <a href="edit_sales_records.php?id=<?php echo $row['SalesID']?>">Edit</td><?php
+			?><td> <a href="display_sales_records.php?id=<?php echo $row['SalesID']?>">Edit</td><?php
 			echo "</tr>";
 		}
 		echo "</table>";
 		mysqli_close($connect);
+		error_reporting(0);
+		if($_GET['id'] == true) {
+			include 'edit_sales_records.php';
+		}
+
 		?>
 	</article>
 	<?php include("footer.inc"); ?>
