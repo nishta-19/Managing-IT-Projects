@@ -79,7 +79,9 @@
 	<link href="styles/page_style.css" rel="stylesheet" />
 </head>
 <body>
-	<?php include("header.inc"); ?>
+    <header>
+        <h1>Peoples Health Pharmacy</h1>
+    </header>
 	<div id="main">
 		<article>
 			<h2>Login</h2>

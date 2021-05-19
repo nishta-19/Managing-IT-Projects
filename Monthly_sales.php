@@ -7,6 +7,8 @@ session_start();
 <!DOCTYPE html>
 <html>
 <body>
+<?php include("header.inc"); ?>
+<article>
 <h2>Monthly sales Report</h2>
 			<h3>Dates</h3>
       <p>Select a starting date and a ending date for the sales that you wish to be shown.</p>
@@ -57,6 +59,7 @@ while($data = $result->fetch_assoc())
 ?>
 </table><br>
 <a href="monthly_sales_db.php"><button>Export As CSV</button></a>
+</article>
 <?php include("footer.inc"); ?>
 </body>
 </html>

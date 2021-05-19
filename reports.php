@@ -11,12 +11,10 @@
 </head>
 <body>
 	<?php include("header.inc"); ?>
-	<div id="main">
 		<article>
 			<h2>Reports </h2>
 			<p>add data about the reports</p>
 		</article>
 		<?php include("footer.inc"); ?>
-	</div>
 </body>
 </html>
