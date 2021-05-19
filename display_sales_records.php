@@ -19,8 +19,8 @@ if ($connect->connect_error) {
 	die("Connection failed: " . $connect->connect_error);
   }
 
-$resultProduct = mysqli_query($connect, "Select Prodname, Prodtype from Product");
-$resultSales = mysqli_query($connect, "Select * from Sales");
+$resultProduct = mysqli_query($connect, "Select Prodname, Prodtype from product");
+$resultSales = mysqli_query($connect, "Select * from sales");
 $resultP = mysqli_fetch_all($resultProduct, $mode=MYSQLI_ASSOC);
 echo "<table class='displaytable'>
 <tr>
@@ -31,6 +31,7 @@ echo "<table class='displaytable'>
 <th>Prodtype</th>
 <th>Amount</th>
 <th>Date</th>
+<th>Edit</th>
 </tr>";
 while($row = mysqli_fetch_array($resultSales))
 {
@@ -41,6 +42,7 @@ while($row = mysqli_fetch_array($resultSales))
 	echo "<td>" . $resultP[intval($row['ProductID'] - 1 )]['Prodtype'] . "</td>";
 	echo "<td>" . $row['Ammount'] . "</td>";
 	echo "<td>" . $row['Date'] . "</td>";
+	?><td> <a href="edit_sales_records.php?id=<?php echo $row['SalesID']?>">Edit</td><?php
 	echo "</tr>";
 }
 echo "</table>";
