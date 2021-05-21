@@ -41,7 +41,7 @@ if (!isset($_SESSION['loggedin'])) {
 		<th>Prodtype</th>
 		<th>Amount</th>
 		<th>Date</th>
-		<th>Edit</th>
+		<th colspan='2'>Action</th>
 		</tr>";
 		while($row = mysqli_fetch_array($resultSales))
 		{
@@ -52,7 +52,9 @@ if (!isset($_SESSION['loggedin'])) {
 			echo "<td>" . $resultP[intval($row['ProductID'] - 1 )]['Prodtype'] . "</td>";
 			echo "<td>" . $row['Ammount'] . "</td>";
 			echo "<td>" . $row['Date'] . "</td>";
-			?><td> <a href="display_sales_records.php?id=<?php echo $row['SalesID']?>">Edit</td><?php
+			?><td> <a href="display_sales_records.php?id=<?php echo $row['SalesID']?>">Edit</td>
+			<td> <a href="delete_sales_records.php?id=<?php echo $row['SalesID']?>">Delete</td>
+			<?php
 			echo "</tr>";
 		}
 		echo "</table>";
@@ -63,6 +65,8 @@ if (!isset($_SESSION['loggedin'])) {
 		}
 
 		?>
+
+
 	</article>
 	<?php include("footer.inc"); ?>
 </body>
