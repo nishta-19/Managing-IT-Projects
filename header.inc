@@ -14,7 +14,7 @@
         if (isset($_SESSION["loggedin"]))
         {
             //echo '<li><a href="display_sales_records.php">Home </a></li>';
-            echo '<li><a href="logout.php">Logout</a></li>';
+            echo '<li id="logout"><a href="logout.php">Logout</a></li>';
         }
     ?>
         </ul>

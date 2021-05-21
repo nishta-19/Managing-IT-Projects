@@ -75,6 +75,10 @@ nav ul li {
 	font-size: 93%;
 }
 
+#logout {
+	float: right !important;
+}
+
 nav ul li a {
 	display:block;
 	font-weight: bold;
