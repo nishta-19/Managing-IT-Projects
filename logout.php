@@ -2,5 +2,5 @@
 session_start();
 session_destroy();
 // Redirect to the login page:
-header('Location: index.php');
+header('Location: display_sales_records.php');
 ?>

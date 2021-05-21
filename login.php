@@ -6,7 +6,7 @@
 
     // check if the user is already logged in 
     if(isset($_SESSION["loggedin"])){
-        header("location: index.php");
+        header("location: display_sales_records.php");
         exit;
     }
 
@@ -53,7 +53,7 @@
                     $_SESSION['name'] = $_POST['username'];
                     $_SESSION['id'] = $id;
 
-                    header("location: index.php");
+                    header("location: display_sales_records.php");
                     
                 } else {
                     // Incorrect password

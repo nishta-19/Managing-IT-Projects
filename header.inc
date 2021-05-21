@@ -4,7 +4,7 @@
     <?php
         if (isset($_SESSION["loggedin"]))
         {
-            //echo '<a href="index.php">Home </a>';
+            //echo '<a href="display_sales_records.php">Home </a>';
             echo '<a href="logout.php">Logout</a>';
         }
     ?>
