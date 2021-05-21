@@ -15,6 +15,6 @@
         <ul>
             <li><a href="display_sales_records.php">Display Sales Records</a></li>
             <li><a href="add_sales_records.php">Add sales records</a></li>
-            <li><a href="monthly_sales.php">Reports</a></li>
+            <li><a href="monthly_sales.php">Display Monthly Sales Report</a></li>
         </ul>
     </nav>
