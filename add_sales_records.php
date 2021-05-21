@@ -3,6 +3,12 @@ Include 'config.php';
 Include 'head.php';
 $ResultSet = $con->query("SELECT Username FROM user");
 $ResultSet1 = $con->query("SELECT Prodname FROM product");
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: login.php');
+	exit;
+}
 ?>
 
 <!DOCTYPE html>
