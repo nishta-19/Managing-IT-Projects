@@ -16,3 +16,9 @@ if (!isset($_SESSION['loggedin'])) {
   <?php include("header.inc"); ?>
   <article>
     <h2>Monthly Sales Prediction</h2>
+    <p>The chart shows predicted sales for next month.</p>
+
+
+  </article>
+  <?php include("footer.inc"); ?>
+</body>
